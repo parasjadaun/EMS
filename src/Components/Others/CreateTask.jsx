@@ -2,11 +2,11 @@ import React from 'react'
 
 const CreateTask = () => {
   return (
-    <div className="flex-1">
-      <form className="mt-7 flex w-full gap-10 rounded bg-[#1c1c1c] p-7 font-medium">
+    <div>
+      <form className="mt-7 flex w-full flex-col gap-6 rounded bg-[#1c1c1c] p-4 font-medium sm:p-7 lg:flex-row lg:gap-10">
         
         {/* Left Section */}
-        <div className="w-1/2">
+        <div className="w-full lg:w-1/2">
           
           {/* Task Title */}
           <div>
@@ -62,7 +62,7 @@ const CreateTask = () => {
         </div>
 
         {/* Right Section */}
-        <div className="w-1/2">
+        <div className="w-full lg:w-1/2">
           
           {/* Description */}
           <div>
