@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AuthContext } from '../../Context/AuthProvider'
 
-const Header = ({data}) => {
+const Header = () => {
+
 const logOutUser=()=>{
-  localStorage.removeItem('user')
-  window.location.reload()
+  localStorage.removeItem('loggedInUser')
+  setLoggedInUser(null)
 }
+     const { loggedInUser, setLoggedInUser } = useContext(AuthContext)
+     const data = loggedInUser?.data
   return (
+  
    <div>
      <div className='flex flex-wrap items-start justify-between gap-4'>
      <h1 className='font-semibold text-white'>Hello,<br /><span className='text-3xl font-bold '>👋{data?.firstName ?? 'Admin'}</span></h1>
